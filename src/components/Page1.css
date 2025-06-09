@@ -1,0 +1,58 @@
+/* Page1.css */
+
+#id-1 {
+  padding: 0.5rem 1rem;
+}
+
+#id-3 {
+  min-height: calc(100vh - 60px); /* adjust for navbar height */
+  width: 200px;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+}
+
+
+#id-B {
+  padding: 1rem;
+  background-color: #ffffff;
+  margin-top: 1rem;
+}
+
+#id-D {
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+#id-F {
+  margin-bottom: 1rem;
+}
+
+#id-H {
+  max-width: 300px;
+  margin-bottom: 0; /* override previous mb-3 from JSX */
+}
+
+
+#id-L {
+  min-height: 100%;
+  overflow-y: auto;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  #id-3, #id-D {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #id-H {
+    width: 100%;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+}

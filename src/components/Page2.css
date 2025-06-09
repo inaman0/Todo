@@ -1,0 +1,55 @@
+#id-N {
+  padding: 0.4rem 0.8rem; /* Slightly reduced navbar padding */
+}
+
+#id-P {
+  min-height: calc(100vh - 56px); /* Adjusted height slightly */
+  width: 180px; /* Narrower sidebar */
+  padding: 0.8rem;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+}
+
+#id-X {
+  padding: 0.8rem;
+  background-color: #ffffff;
+  margin-top: 0.8rem;
+  flex-grow: 1;
+}
+
+#id-Z {
+  flex-wrap: wrap;
+  gap: 0.8rem; /* Reduced spacing between nav tabs */
+  margin-bottom: 0.8rem;
+}
+
+#id-11,
+#id-13 {
+  margin-right: 0.8rem;
+  margin-bottom: 0.8rem;
+  padding: 0.4rem 0.75rem; /* Optional: shrink button size slightly */
+  font-size: 0.9rem;
+}
+
+#id-15 {
+  min-height: 180px;
+  overflow-y: auto;
+  max-width: 100%;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  #id-P, #id-Z {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #id-11, #id-13 {
+    width: 100%;
+  }
+
+  .navbar-brand {
+    font-size: 0.95rem;
+  }
+}

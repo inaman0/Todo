@@ -1,0 +1,106 @@
+.create-task-container {
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  height: 100%;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for Row 3 */
+  grid-template-areas:
+    "task task due_date"
+    "description description description"
+    "user priority status"
+    "attachment attachment attachment"
+    "comment comment comment";
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+
+/* Grid area assignments */
+.Task {
+  grid-area: task;
+}
+
+.Due_Date {
+  grid-area: due_date;
+}
+
+.Description {
+  grid-area: description;
+}
+
+.User {
+  grid-area: user;
+}
+
+.Enum:nth-of-type(1) {
+    grid-area: priority;
+  }
+  
+  .Enum:nth-of-type(2) {
+    grid-area: status;
+  }
+
+.Attachment {
+  grid-area: attachment;
+}
+
+.Comment {
+  grid-area: comment;
+}
+
+/* Common field layout */
+.Task,
+.Due_Date,
+.Description,
+.User,
+.Enum,
+.Status,
+.Attachment,
+.Comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+/* Label styling */
+.Task_Title,
+.Due_Date_Title,
+.Description_Title,
+.User_Title,
+.Enum_Title,
+.Status_Title,
+.Atachment_Title,
+.Comment_Title {
+  font-weight: 400;
+  margin-bottom: 3px;
+}
+
+/* Input styling */
+.Task_Input,
+.Due_Date_Input,
+.Description_Input,
+.Enum_Input,
+.Attachment_Input,
+.Comment_Input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.Description_Input,.Comment_Input{
+    height: 80px; /* Adjust height for description */
+}
+
+/* Button row styling */
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-top: 0.8rem;
+}
